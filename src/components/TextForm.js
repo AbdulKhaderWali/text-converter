@@ -43,7 +43,6 @@ export default function TextForm(props) {
         <button className= {`btn btn-${props.darkmode? "dark" : "primary"} mx-1`} onClick={handleUp}>Convert to Uppercase</button>
         <button className= {`btn btn-${props.darkmode? "dark" : "primary"} mx-1`} onClick={handleLow}>Convert to Lowercase</button>
         <button className= {`btn btn-${props.darkmode? "dark" : "primary"} mx-1`} onClick={handleClear}>Clear</button>
-        <button className= {`btn btn-${props.darkmode? "dark" : "primary"} mx-1`} onClick={props.toggleDarkMode}>{`${props.darkmode ? "Light Mode" : "Dark Mode"}`}</button>
         <div className="container my-3">
         <h2>Your Text Summary</h2>
         <p>{text.split(" ").length} Words {text.length} Characters</p>

@@ -6,25 +6,19 @@ function App() {
   function toggleDarkMode(){
     setDarkMode(prevMode => !prevMode)
   }
-  let styles = {}
   if(darkMode){
-
-      styles = {
-          backgroundColor:"black",
-          color:"white"
-          
-      }
+    document.body.style.backgroundColor = "grey"
+    document.body.style.color = "white"
   }
   else{
-      styles = {
-
-      }
+    document.body.style.backgroundColor = "white"
+    document.body.style.color = "black"
   }
   return (
-    <div className="App" style={styles}>
-      <Navbar title = "TextUtils" about = "About us" darkmode = {darkMode}/>
+    <div className="App">
+      <Navbar title = "TextUtils" about = "About us" darkmode = {darkMode} toggleDarkMode = {toggleDarkMode}/>
       <div className="container my-3">
-      <TextForm heading = "Enter the text to analyze" darkmode = {darkMode} toggleDarkMode = {toggleDarkMode}/>
+      <TextForm heading = "Enter the text to analyze" darkmode = {darkMode} />
       </div>
     </div>
   );
